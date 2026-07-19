@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://cr3bve7u01rwi"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_0ubel"]
+[ext_resource type="Texture2D" uid="uid://bgq2un7hr3br" path="res://icon.svg" id="1_bce6f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0h5o"]
+size = Vector2(128, 128)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7rr2c"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(86, 454)
+scale = Vector2(1.29161, 2.85451)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource("RectangleShape2D_w0h5o")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2/CollisionShape2D"]
+texture = ExtResource("1_bce6f")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(727, 694)
+scale = Vector2(13.4457, 1.13644)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+shape = SubResource("RectangleShape2D_w0h5o")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3/CollisionShape2D"]
+texture = ExtResource("1_bce6f")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." node_paths=PackedStringArray("pivot")]
+position = Vector2(546, 571)
+script = ExtResource("1_0ubel")
+pivot = NodePath("Node2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_7rr2c")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+scale = Vector2(0.1875, 0.264204)
+texture = ExtResource("1_bce6f")
+
+[node name="Node2D" type="Node2D" parent="CharacterBody2D"]
+
+[node name="GUN" type="Sprite2D" parent="CharacterBody2D/Node2D"]
+position = Vector2(0, -15)
+scale = Vector2(0.070873, 0.229734)
+texture = ExtResource("1_bce6f")
