@@ -1,2 +1,2 @@
 # NothingHappens
-Repository for the NothingHappens game
+Repository for the NothingHappens game.
