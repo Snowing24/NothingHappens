@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bgq2un7hr3br" path="res://Textures/icon.svg" id="2_oqrbh"]
 
 [node name="gun" type="Node2D" unique_id=980852758]
+z_index = 5
 script = ExtResource("1_nhasy")
 
 [node name="Timer" type="Timer" parent="." unique_id=1258424625]

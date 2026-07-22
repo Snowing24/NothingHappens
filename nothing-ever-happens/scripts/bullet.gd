@@ -3,7 +3,7 @@ extends Node2D
 
 @onready var ray = get_node("RayCast2D") as RayCast2D #imports raycast node into bullet script
 
-var speed #vector 2 rotated to the angle of the dir it was fired
+var speed = 20 #vector 2 rotated to the angle of the dir it was fired
 var collider #what the bullet hits
 var new_position
 var damage #is also given to bullet from the gun.
